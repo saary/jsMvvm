@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MVVM RSS Reader</title>
+    <link rel="Stylesheet" type="text/css" href="rssreader.css" />
+    <script src="https://www.google.com/jsapi?key=ABQIAAAA3jyYGaN0_yh5Uafl8HTDBRSSM4DhxyITVwncR--F6Qkp_5gAgxTZZdQppY9NGJXse9Wnjg_raWkgGg" type="text/javascript"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.6.min.js" type="text/javascript"></script>  
+    <script src="https://www.google.com/uds/?file=feeds&v=1" type="text/javascript"></script>
+</head>
+<body>
+    <div class="mainDiv">
+        <div class="inputDiv">
+            <label>RSS Feed Url</label>
+            <div>
+                <input id="feedUrlInput" class="feedUrlInput" type="text" datalink="rssUrl" />
+                <a class="link" command="loadFeedCommand" cmdArg="feedList">load feed</a>
+            </div>
+        </div>
+        <script id="feedItemTemplate" type="text/x-jquery-tmpl">
+        <li class="feedListItem">
+            <a class="link" href="${link}" target="_blank">${title}</a>
+            <label class="itemDate">${publishedDate}</label>
+            <p class="itemcontent">${contentSnippet}</p>
+            <a class="link morelink" command="moreCommand" cmdArg=".itemcontent">more</a>
+        </li>
+        </script>
+        <ul id="feedList" template="feedItemTemplate" class="feedList">
+        </ul>
+    </div>
+    <script src="jquery.tmpl.js" type="text/javascript"></script>
+    <script src="jquery.datalink.js" type="text/javascript"></script>
+    <script src="MVVMUtils.js" type="text/javascript"></script>
+    <script src="ReaderViewModel.js" type="text/javascript"></script>
+</body>
+</html>

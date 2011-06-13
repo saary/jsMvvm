@@ -1,0 +1,56 @@
+﻿body {
+    background-color: Black; color: White;
+    font-family: Georgia, Calibri, Helvetica, Arial, "Times New Roman";
+    font-size: small;
+}
+
+.mainDiv {
+    position: relative; display:block; margin-left: auto; margin-right: auto;
+    width: 320px; 
+}
+
+label {
+    display: block; position: relative; font-size: medium;
+    padding-top: 5px; padding-bottom: 5px; width: 100%;
+}
+
+.itemDate {
+    font-size: small; color: #888888;
+}
+
+.itemcontent {
+    margin-top: 5px; margin-bottom: 2px;
+}
+
+.feedUrlInput {
+    position: relative; display: inline-block;
+    margin-right: 5px;
+    width: 70%; 
+}
+
+.link {
+    position: relative; display: inline-block;
+    font-size: large;
+    cursor: pointer;
+    color: #3CB1E7;
+}
+
+.morelink {
+    font-size: small;
+    color: #3CB1E7;
+}
+
+.inputDiv {
+    display: block; position: relative; overflow: hidden; padding: 5px; margin-top: 5px;
+    border: 1px solid #888888;
+}
+
+.feedList {
+    display: block; position: relative; overflow: hidden; padding-left: 0px;
+    list-style-type: none;
+}
+
+.feedListItem {
+    display: block; position: relative;
+    margin-bottom: 10px;
+}
