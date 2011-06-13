@@ -1,4 +1,4 @@
-﻿(function (window, $, MVVMUtils, google) {
+﻿(function (window, $, jsMvvm, google) {
     "use strict";
 
     window.ReaderViewModel = {
@@ -32,12 +32,12 @@
             commandingElement.hide();
         },
         bind: function () {
-            MVVMUtils.bindCommands(this);
-            MVVMUtils.bindDataLinks($(document), this);
+            jsMvvm.bindCommands(this);
+            jsMvvm.bindDataLinks($(document), this);
         }
     };
 
     $(document).ready(function () {
         window.ReaderViewModel.bind();
     });
-}(window, jQuery, MVVMUtils, google));
+}(window, jQuery, jsMvvm, google));
