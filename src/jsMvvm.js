@@ -11,7 +11,7 @@
         return ending === strEnding;
     }
 
-    window.MVVMUtils = {
+    window.jsMvvm = {
         /// <summary>
         /// An MVVM utility helper class for data binding and commanding support
         /// </summary>
